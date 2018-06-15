@@ -104,8 +104,8 @@ function check_main( $theme ) {
 		}
 		echo '</div><!-- .theme-info-->';
 
-		$plugins = get_plugins( '/theme-check' );
-		$version = explode( '.', $plugins['theme-check.php']['Version'] );
+		$plugins = get_plugins( '/theme-check-extended' );
+		$version = explode( '.', $plugins['theme-check-extended.php']['Version'] );
 		echo '<p>' . sprintf(
 				__( ' Running %1$s tests against %2$s using Guidelines Version: %3$s Plugin revision: %4$s', 'theme-check-extended' ),
 				'<strong>' . $checkcount . '</strong>',
