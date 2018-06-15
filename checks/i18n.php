@@ -50,7 +50,7 @@ class I18NCheck implements themecheck {
 							if ( isset( $line[0] ) ) {
 								$error = ( !strpos( $error, $line[0] ) ) ? $grep : '';
 							}
-							$this->error[] = sprintf('<span class="tc-lead tc-recommended">'.__('RECOMMENDED','theme-check').'</span>: '.__('Possible variable %1$s found in translation function in %2$s. Translation function calls must NOT contain PHP variables. %3$s','theme-check'),
+							$this->error[] = sprintf('<span class="tc-lead tc-recommended">'.__('RECOMMENDED','theme-check-extended').'</span>: '.__('Possible variable %1$s found in translation function in %2$s. Translation function calls must NOT contain PHP variables. %3$s','theme-check-extended'),
 								'<strong>' . $token[1] . '</strong>',
 								'<strong>' . $filename . '</strong>',
 								$error

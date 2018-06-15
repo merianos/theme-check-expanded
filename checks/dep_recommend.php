@@ -40,7 +40,7 @@ class Deprecated_Recommended implements themecheck {
 
 					// Point out the deprecated function.
 					$error_msg = sprintf(
-						__( '%1$s found in the file %2$s. Deprecated since version %3$s.', 'theme-check' ),
+						__( '%1$s found in the file %2$s. Deprecated since version %3$s.', 'theme-check-extended' ),
 						'<strong>' . $error . '()</strong>',
 						'<strong>' . $filename . '</strong>',
 						'<strong>' . $version . '</strong>'
@@ -48,14 +48,14 @@ class Deprecated_Recommended implements themecheck {
 
 					// Add alternative function when available.
 					if ( $alt ) {
-						$error_msg .= ' ' . sprintf( __( 'Use %s instead.', 'theme-check' ), '<strong>' . $alt . '</strong>' );
+						$error_msg .= ' ' . sprintf( __( 'Use %s instead.', 'theme-check-extended' ), '<strong>' . $alt . '</strong>' );
 					}
 
 					// Add the precise code match that was found.
 					$error_msg .= $grep;
 
 					// Add the finalized error message.
-					$this->error[] = '<span class="tc-lead tc-recommended">' . __('RECOMMENDED','theme-check') . '</span>: ' . $error_msg;
+					$this->error[] = '<span class="tc-lead tc-recommended">' . __('RECOMMENDED','theme-check-extended') . '</span>: ' . $error_msg;
 				}
 			}
 		}
