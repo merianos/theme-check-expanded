@@ -24,7 +24,7 @@ class DirectoriesCheck implements themecheck {
 		}
 
 		if ($found) {
-			$this->error[] = sprintf('<span class="tc-lead tc-required">' . __( 'REQUIRED', 'theme-check' ) . '</span>: ' . __( 'Please remove any extraneous directories like .git or .svn from the ZIP file before uploading it.', 'theme-check') );
+			$this->error[] = sprintf('<span class="tc-lead tc-required">' . __( 'REQUIRED', 'theme-check-extended' ) . '</span>: ' . __( 'Please remove any extraneous directories like .git or .svn from the ZIP file before uploading it.', 'theme-check-extended') );
 			$ret = false;
 		}
 
