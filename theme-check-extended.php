@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Theme Check
-Plugin URI: http://ottopress.com/wordpress-plugins/theme-check/
-Description: A simple and easy way to test your theme for all the latest WordPress standards and practices. A great theme development tool!
-Author: Otto42, pross
-Author URI: http://ottopress.com
-Version: 20160523.1
-Text Domain: theme-check
+Plugin Name: Theme Check Extended
+Plugin URI: https://github.com/merianos/theme-check-expanded/
+Description: Updated version using folders and files exclusion functionality.
+Author: Merianos Nikos
+Author URI: https://merianos.wordpress.com/
+Version: 1.0.0
+Text Domain: theme-check-extended
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -18,7 +18,7 @@ class ThemeCheckMain {
 	}
 
 	function tc_i18n() {
-		load_plugin_textdomain( 'theme-check', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/'  );
+		load_plugin_textdomain( 'theme-check-extended', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/'  );
 	}
 
 	function load_styles() {
@@ -37,7 +37,7 @@ class ThemeCheckMain {
 
 	function themecheck_do_page() {
 		if ( !current_user_can( 'manage_options' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.', 'theme-check' ) );
+		wp_die( __( 'You do not have sufficient permissions to access this page.', 'theme-check-extended' ) );
 		}
 
 		add_filter( 'extra_theme_headers', array( $this, 'tc_add_headers' ) );
@@ -47,7 +47,7 @@ class ThemeCheckMain {
 
 		?>
 		<div id="theme-check" class="wrap">
-		<h1><?php _ex( 'Theme Check', 'title of the main page', 'theme-check' ); ?></h1>
+		<h1><?php _ex( 'Theme Check', 'title of the main page', 'theme-check-extended' ); ?></h1>
 		<div class="theme-check">
 		<?php
 			tc_form();
